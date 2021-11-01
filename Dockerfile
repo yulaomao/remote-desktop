@@ -106,7 +106,8 @@ RUN set -x && \
 # Set up launcher for websockify
 # (websockify must run in  Slicer's Python environment)
 COPY websockify ./Slicer/bin/
-RUN chmod +x ${HOME}/Slicer/bin/websockify
+RUN chmod +x ${HOME}/Slicer/bin/websockify && \
+    chmod 777 -R Slicer
 
 ################################################################################
 # Need to run Slicer as non-root because
