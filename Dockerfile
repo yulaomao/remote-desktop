@@ -1,4 +1,4 @@
-FROM debian:bullseye-20200422-slim
+FROM ubuntu:latest
 
 ################################################################################
 # Prevent apt-get from prompting for keyboard choice
@@ -90,6 +90,7 @@ COPY xorg.conf .
 # Build rebind.so (required by websockify)
 RUN set -x && \
     apt-get update -q -y && \
+    apt-get install ttf-wqy-zenhei -q -y && \
     apt-get install -y build-essential --no-install-recommends && \
     mkdir src && \
     cd src && \
