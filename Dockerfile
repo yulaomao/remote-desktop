@@ -142,7 +142,8 @@ RUN /home/sliceruser/Slicer/bin/PythonSlicer -m pip install --upgrade websockify
 
 COPY start-xorg.sh .
 COPY install.sh .
-RUN ./install.sh ${HOME}/Slicer/Slicer && \
+RUN chmod 777 install && \
+    ./install.sh ${HOME}/Slicer/Slicer && \
     rm ${HOME}/install.sh
 
 ################################################################################
