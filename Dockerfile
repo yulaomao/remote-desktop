@@ -4,7 +4,7 @@ FROM ubuntu:latest
 # Prevent apt-get from prompting for keyboard choice
 #  https://superuser.com/questions/1356914/how-to-install-xserver-xorg-in-unattended-mode
 ENV DEBIAN_FRONTEND=noninteractive
-
+ENV LANG C.UTF-8
 ################################################################################
 # Remove documentation to save hard drive space
 #  https://askubuntu.com/questions/129566/remove-documentation-to-save-hard-drive-space
